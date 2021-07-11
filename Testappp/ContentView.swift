@@ -24,7 +24,13 @@ struct ContentView: View {
 
                 }
                 Spacer()
-                Image("dealbutton")
+                Button(action: {
+                    let impactMed = UIImpactFeedbackGenerator(style: .heavy)
+                        impactMed.impactOccurred()
+                },label: {
+                    Image("dealbutton")
+                })
+                
                 HStack {
                     Spacer()
 
